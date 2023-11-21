@@ -63,3 +63,9 @@ jobs:
           path: |
             artifacts
             buildlog
+
+      # Customize Loop: Download and apply patches
+      - name: Customize Loop
+        run: |
+          # Basic I:C Bolus Calculation
+          curl https://raw.githubusercontent.com/bjorkert/patches/master/basicICBolusCalc.patch | git apply
